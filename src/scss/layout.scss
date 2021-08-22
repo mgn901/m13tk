@@ -1,0 +1,174 @@
+@use 'sass:math';
+
+.tkalign {
+	&-start {align-items: flex-start}
+	&-center {align-items: center}
+	&-end {align-items: flex-end}
+	&-stretch {align-items: stretch}
+}
+
+.tkjustify {
+	&-start {justify-content: flex-start}
+	&-center {justify-content: center}
+	&-end {justify-content: flex-end}
+	&-between {justify-content: space-between}
+	&-evenly {justify-content: space-evenly}
+	&-around {justify-content: space-around}
+}
+
+%tkxy {
+	position: relative;
+	width: 100%;
+	height: 0;
+	>%cnt {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}
+@mixin x($x) {width: $x * .25rem}
+@mixin y($y) {
+	height: $y * .25rem;
+	max-height: $y * .25rem;
+}
+@mixin tkxy($x, $y) {
+	padding-bottom: 100% * math.div($y, $x);
+}
+.tkx {
+	&-4 {@include x(4)}
+	&-6 {@include x(6)}
+	&-8 {@include x(8)}
+	&-12 {@include x(12)}
+	&-16 {@include x(16)}
+	&-18 {@include x(18)}
+	&-20 {@include x(20)}
+	&-24 {@include x(24)}
+	&-30 {@include x(30)}
+	&-40 {@include x(40)}
+	&-80 {@include x(80)}
+	&-120 {@include x(120)}
+	&-160 {@include x(160)}
+	&-fit {width: 100%}
+}
+.tky {
+	&-4 {@include y(4)}
+	&-6 {@include y(6)}
+	&-8 {@include y(8)}
+	&-12 {@include y(12)}
+	&-16 {@include y(16)}
+	&-18 {@include y(18)}
+	&-20 {@include y(20)}
+	&-24 {@include y(24)}
+	&-30 {@include y(30)}
+	&-60 {@include y(60)}
+	&-120 {@include y(120)}
+	&-180 {@include y(180)}
+	&-240 {@include y(240)}
+	&-fit {height: 100%}
+}
+.tkxy-1-1 {@extend %tkxy; @include tkxy(1, 1)}
+.tkxy-4-3 {@extend %tkxy; @include tkxy(4, 3)}
+.tkxy-16-9 {@extend %tkxy; @include tkxy(16, 9)}
+.tkxy-3-4 {@extend %tkxy; @include tkxy(3, 4)}
+.tkxy-9-16 {@extend %tkxy; @include tkxy(9, 16)}
+
+@mixin p($i) {padding: $i * .25rem}
+@mixin py($i) {
+	padding-top: $i * .25rem;
+	padding-bottom: $i * .25rem;
+}
+@mixin px($i) {
+	padding-left: $i * .25rem;
+	padding-right: $i * .25rem;
+}
+.tkp {
+	&-0 {@include p(0)}
+	&-1 {@include p(1)}
+	&-2 {@include p(2)}
+	&-3 {@include p(3)}
+	&-4 {@include p(4)}
+	&-5 {@include p(5)}
+	&-6 {@include p(6)}
+	&y {
+		&-0 {@include py(0)}
+		&-1 {@include py(1)}
+		&-2 {@include py(2)}
+		&-3 {@include py(3)}
+		&-4 {@include py(4)}
+		&-5 {@include py(5)}
+		&-6 {@include py(6)}
+	}
+	&x {
+		&-0 {@include px(0)}
+		&-1 {@include px(1)}
+		&-2 {@include px(2)}
+		&-3 {@include px(3)}
+		&-4 {@include px(4)}
+		&-5 {@include px(5)}
+		&-6 {@include px(6)}
+	}
+}
+
+.tkb-normal {border: 1px var(--tkcolor-bg2) solid}
+
+@mixin r($i) {border-radius: $i * .25rem}
+@mixin r-tl($i) {border-top-left-radius: $i * .25rem}
+@mixin r-tr($i) {border-top-right-radius: $i * .25rem}
+@mixin r-bl($i) {border-bottom-left-radius: $i * .25rem}
+@mixin r-br($i) {border-bottom-right-radius: $i * .25rem}
+.tkr {
+	&-0 {@include r(0)}
+	&-1 {@include r(1)}
+	&-2 {@include r(2)}
+	&-3 {@include r(3)}
+	&-4 {@include r(4)}
+}
+.tkr-tl {
+	&-0 {@include r-tl(0)}
+	&-1 {@include r-tl(1)}
+	&-2 {@include r-tl(2)}
+	&-3 {@include r-tl(3)}
+	&-4 {@include r-tl(4)}
+}
+.tkr-tr {
+	&-0 {@include r-tr(0)}
+	&-1 {@include r-tr(1)}
+	&-2 {@include r-tr(2)}
+	&-3 {@include r-tr(3)}
+	&-4 {@include r-tr(4)}
+}
+.tkr-bl {
+	&-0 {@include r-bl(0)}
+	&-1 {@include r-bl(1)}
+	&-2 {@include r-bl(2)}
+	&-3 {@include r-bl(3)}
+	&-4 {@include r-bl(4)}
+}
+.tkr-br {
+	&-0 {@include r-br(0)}
+	&-1 {@include r-br(1)}
+	&-2 {@include r-br(2)}
+	&-3 {@include r-br(3)}
+	&-4 {@include r-br(4)}
+}
+
+%sticky {
+	position: sticky;
+	z-index: 1;
+}
+.tksticky {
+	&-top {@extend %sticky; top: 0}
+	&-bottom {@extend %sticky; bottom: 0}
+	&-right {@extend %sticky; right: 0}
+	&-left {@extend %sticky; left: 0}
+}
+
+@mixin shadow($s) {
+	box-shadow: 0 $s * .025rem $s * .125rem 0 var(--tkcolor-shadow);
+}
+.tkshadow{
+	&-1 {@include shadow(1)}
+	&-2 {@include shadow(2)}
+	&-3 {@include shadow(3)}
+	&-4 {@include shadow(4)}
+}

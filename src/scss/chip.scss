@@ -1,0 +1,20 @@
+%chip {
+	@extend %cntchip;
+	display: inline-flex;
+	flex-shrink: 0;
+	height: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	vertical-align: top;
+}
+.tkchip-x {
+	@extend %chip;
+	flex-direction: row;
+}
+.tkchip-y {
+	@extend %chip;
+	flex-direction: column;
+}
+.tkchip--shrinkable {
+	flex-shrink: 1;
+}

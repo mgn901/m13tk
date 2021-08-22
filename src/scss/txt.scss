@@ -1,0 +1,30 @@
+%txt {
+	margin: 0;
+	text-decoration: none;
+	color: var(--tkcolor-fg1);
+	font-weight: normal;
+	font-size: 1rem;
+}
+.tktxt {
+	& {@extend %txt;}
+	&-heading {@extend %txt; font-weight: bold}
+	&-small {@extend %txt; font-size: .75rem}
+	&-fg0 {@extend %txt; color: var(--tkcolor-fg0)}
+	&-fg1 {@extend %txt; color: var(--tkcolor-fg1)}
+	&-fg2 {@extend %txt; color: var(--tkcolor-fg2)}
+}
+.tkcnt-txt--small>%txt {
+	font-size: .75rem;
+}
+.tktxt--shrinkable {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.tkimg {
+	height: auto;
+	object-fit: cover;
+	vertical-align: top;
+	background-color: var(--tkcolor-bg1);
+}

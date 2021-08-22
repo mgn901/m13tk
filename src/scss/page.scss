@@ -1,0 +1,43 @@
+%page-p {
+	width: 100%;
+	margin: 0 0 1.75rem;
+	line-height: 1.75rem;
+	color: var(--tkcolor-fg0);
+}
+%page-heading {
+	font-weight: bold;
+}
+.tkpage{
+	&-h1 {
+	@extend %page-p, %page-heading;
+	line-height: 3.5rem;
+	font-size: 2.6rem;
+	}
+	&-h2 {
+		@extend %page-p, %page-heading;
+		line-height: 2.625rem;
+		font-size: 1.8rem;
+	}
+	&-h3 {
+		@extend %page-p, %page-heading;
+		font-size: 1.4rem;
+	}
+	&-h4 {
+		@extend %page-p, %page-heading;
+		font-size: 1.2rem;
+	}
+	&-h5 {
+		@extend %page-p, %page-heading;
+		color: var(--tkcolor-fg1);
+		font-size: 1.1rem;
+	}
+	&-h6 {
+		@extend %page-p, %page-heading;
+		color: var(--tkcolor-fg2);
+		font-size: 1rem;
+	}
+	&-p {
+		@extend %page-p;
+		font-size: 1rem;
+	}
+}

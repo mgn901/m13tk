@@ -1,0 +1,206 @@
+@use 'sass:math';
+@use 'sass:selector';
+@use 'sass:list';
+@function decimal-round($number, $digits: 0, $mode: round) {
+	$n: 1;
+	@if type-of($number) != number {
+		@return $number;
+	}
+	@if type-of($digits) != number {
+		@return $number;
+	} @else if not unitless($digits) {
+		@return $number;
+	}
+	@if $digits > 0 {
+		@for $i from 1 through $digits {
+			$n: $n * 10;
+		}
+	}
+	@if $mode == round {
+		@return math.div(round($number * $n), $n);
+	} @else if $mode == ceil {
+		@return math.div(ceil($number * $n), $n);
+	} @else if $mode == floor {
+		@return math.div(floor($number * $n), $n);
+	} @else {
+		@warn '#{ $mode } is undefined keyword.';
+		@return $number;
+	}
+}
+
+%cntchip {
+	min-width: 0;
+	max-width: 100%;
+	min-height: 1.5rem;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	box-sizing: border-box;
+	line-height: 1.5rem;
+	line-break: strict;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	text-align: start;
+	text-decoration: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	color: var(--tkcolor-fg1);
+	font-family: $tkfont-sans;
+	font-size: 1rem;
+	font-feature-settings: $tkfont-fontfeature;
+}
+%hasBGColor {background: var(--tkcolor-bg0)}
+%color {&%cntchip {@extend %hasBGColor;}}
+%sticky {@extend %hasBGColor;}
+
+%cnt {
+	@extend %cntchip;
+	width: 100%;
+}
+.tkm-1, .tkm-2, .tkm-3, .tkm-4, .tkm-5, .tkm-6 {
+	@extend %tkm;
+}
+@mixin tkxy($c, $m, $x, $y) {
+	padding-bottom: calc(#{decimal-round(math.div(100%, $c) * math.div($y, $x), 2)} - #{decimal-round(.25rem * $m * (1 - math.div(1, $c)) * math.div($y, $x), 2)});
+}
+@mixin cnt-x--col-child($c, $m) {
+	$width: calc(#{decimal-round(math.div(100%, $c), 2)} - #{decimal-round(.25rem * $m * (1 - math.div(1, $c)), 2)});
+	width: $width;
+	max-width: $width;
+	margin-block-end: .25rem * $m;
+	&:nth-last-child(-n+#{$c}) {margin-block-end: 0;}
+	&.tkxy-1-1 {@include tkxy($c, $m, 1, 1)}
+	&.tkxy-4-3 {@include tkxy($c, $m, 4, 3)}
+	&.tkxy-16-9 {@include tkxy($c, $m, 16, 9)}
+	&.tkxy-3-4 {@include tkxy($c, $m, 3, 4)}
+	&.tkxy-9-16 {@include tkxy($c, $m, 9, 16)}
+	&:nth-child(#{$c}n) {margin-inline-end: 0}
+}
+@mixin cnt-x--col($c) {
+	>%cnt {@include cnt-x--col-child($c, 0)}
+	>.tkm-1 {@include cnt-x--col-child($c, 1)}
+	>.tkm-2 {@include cnt-x--col-child($c, 2)}
+	>.tkm-3 {@include cnt-x--col-child($c, 3)}
+	>.tkm-4 {@include cnt-x--col-child($c, 4)}
+	>.tkm-5 {@include cnt-x--col-child($c, 5)}
+	>.tkm-6 {@include cnt-x--col-child($c, 6)}
+}
+@mixin mx($i) {
+	margin-block-end: 0;
+	margin-inline-end: $i * .25rem
+}
+@mixin my($i) {
+	margin-inline-end: 0;
+	margin-block-end: $i * .25rem
+}
+@mixin at-media($w, $name) {
+	$w2: ($w - 40) * 4 + 1px;
+	@if ($w <= 120) {$w2: 0}
+	$query: '(min-width: #{$w2}) and (max-width: #{4px * $w})';
+	@if ($w >= 280) {$query: '(min-width: #{$w2})'}
+	@media #{$query} {
+		.tkcnt-y--#{$name} {
+			flex-direction: column;
+			>.tkm {
+				&-1 {@include my(1)}
+				&-2 {@include my(2)}
+				&-3 {@include my(3)}
+				&-4 {@include my(4)}
+				&-5 {@include my(5)}
+				&-6 {@include my(6)}
+			}
+			>%cnt, %tkm{&:last-child {@include my(0)}}
+		}
+		.tkcnt-x--#{$name} {
+			flex-direction: row;
+			>.tkm {
+				&-1 {@include mx(1)}
+				&-2 {@include mx(2)}
+				&-3 {@include mx(3)}
+				&-4 {@include mx(4)}
+				&-5 {@include mx(5)}
+				&-6 {@include mx(6)}
+			}
+			>%cnt, %tkm{&:last-child {@include mx(0)}}
+		}
+		.tkcnt-x--col10--#{$name} {@include cnt-x--col(10)}
+		.tkcnt-x--col9--#{$name} {@include cnt-x--col(9)}
+		.tkcnt-x--col8--#{$name} {@include cnt-x--col(8)}
+		.tkcnt-x--col7--#{$name} {@include cnt-x--col(7)}
+		.tkcnt-x--col6--#{$name} {@include cnt-x--col(6)}
+		.tkcnt-x--col5--#{$name} {@include cnt-x--col(5)}
+		.tkcnt-x--col4--#{$name} {@include cnt-x--col(4)}
+		.tkcnt-x--col3--#{$name} {@include cnt-x--col(3)}
+		.tkcnt-x--col2--#{$name} {@include cnt-x--col(2)}
+	}
+}
+.tkcnt-x, .tkchip-x {
+	>.tkm {
+		&-0 {@include mx(0)}
+		&-1 {@include mx(1)}
+		&-2 {@include mx(2)}
+		&-3 {@include mx(3)}
+		&-4 {@include mx(4)}
+		&-5 {@include mx(5)}
+		&-6 {@include mx(6)}
+	}
+	>%cnt, %tkm{&:last-child {@include mx(0)}}
+}
+.tkcnt-y, .tkchip-y {
+	>.tkm {
+		&-0 {@include my(0)}
+		&-1 {@include my(1)}
+		&-2 {@include my(2)}
+		&-3 {@include my(3)}
+		&-4 {@include my(4)}
+		&-5 {@include my(5)}
+		&-6 {@include my(6)}
+	}
+	>%cnt, %tkm{&:last-child {@include my(0)}}
+}
+.tkcnt-x {
+	@extend %cnt;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+.tkcnt-y {
+	@extend %cnt;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+.tkcnt-x--col10 {@include cnt-x--col(10)}
+.tkcnt-x--col9 {@include cnt-x--col(9)}
+.tkcnt-x--col8 {@include cnt-x--col(8)}
+.tkcnt-x--col7 {@include cnt-x--col(7)}
+.tkcnt-x--col6 {@include cnt-x--col(6)}
+.tkcnt-x--col5 {@include cnt-x--col(5)}
+.tkcnt-x--col4 {@include cnt-x--col(4)}
+.tkcnt-x--col3 {@include cnt-x--col(3)}
+.tkcnt-x--col2 {@include cnt-x--col(2)}
+@include at-media(280, 'xl');
+@include at-media(240, 'l');
+@include at-media(200, 'm');
+@include at-media(160, 's');
+@include at-media(120, 'xs');
+
+.tkcnt-txt {
+	& {@extend %cnt;}
+	&--small {
+		line-height: 1rem;
+		font-size: .75rem;
+	}
+}
+.tkcnt {
+	&--wrap {flex-wrap: wrap}
+	&--trim {overflow: hidden}
+	&--noshrinkable {flex-shrink: 0}
+	&--bg0 {@extend %hasBGColor;}
+	&--bg1 {background: var(--tkcolor-bg1)}
+	&--bg2 {background: var(--tkcolor-bg2)}
+	&--bg1, &--bg2 {>%cnt {@extend %hasBGColor;}}
+}
