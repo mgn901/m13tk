@@ -32,7 +32,7 @@ export const App: React.FC = () => {
 					<span className='tktxt-heading'>{item.name}</span>
 				</h4>
 				<p className='tkcnt-txt tkcnt-txt--small tkcnt--trim'>
-					<span className='tktxt-fg2'>{item.description}</span>
+					<span className='tktxt tkcolor-fg2'>{item.description}</span>
 				</p>
 			</div>
 		</a>
@@ -54,7 +54,7 @@ export const App: React.FC = () => {
 				<div className='tkcnt-y tkm-2'>
 					<div className='tkcnt-x tkjustify-between'>
 						<div className='tkchip-x tkchip--shrinkable tkm-2'>
-							<span className='tktxt-heading tktxt-fg0 tktxt--shrinkable tkm-2'>Meganesium2001</span>
+							<span className='tktxt-heading tktxt--shrinkable tkcolor-fg0 tkm-2'>Meganesium2001</span>
 							<span className='tktxt tktxt--shrinkable tkm-2'>@mgn901</span>
 							<span className='tktxt tkm-2'>1h</span>
 						</div>
@@ -89,13 +89,13 @@ export const App: React.FC = () => {
 						<input className='tkinput-text' type='text' />
 					</label>
 					<button className='tkcolor-pr tkchip-x tkbtn-normal tky-12 tkm-3 tkpx-3'>
-						<span className='tktxt-fg0'>ログイン</span>
+						<span className='tktxt tkcolor-fg0'>ログイン</span>
 					</button>
 				</div>
 			</section>
 			<section className='tkcnt-y tkb-normal tkm-4 tkp-3 tkr-3'>
 				<h3 className='tkcnt-x tktxt-heading tkm-3'>メモ一覧</h3>
-				<div className='tkcnt-x tkcnt--col-4 tkcnt--col-3--s tkcnt--col-2--xs tkcnt--col-2--80 tkcnt--wrap tkcnt--bg1 tkm-3 tkp-1 tkr-2'>
+				<div className='tkcnt-x tkcnt--col-4 tkcnt--col-3--s tkcnt--col-2--xs tkcnt--wrap tkcolor-bg1 tkm-3 tkp-1 tkr-2'>
 					{renderedSampleMemos}
 				</div>
 			</section>
