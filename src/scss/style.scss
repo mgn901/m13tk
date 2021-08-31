@@ -27,7 +27,7 @@ $tkshadow-btn: 0 .025rem .125rem 0rem var(--tkcolor-shadow);
 $tkshadow-btn-transparent: 0 .025rem 0 transparent;
 // $tkshadow-card: 0 .1rem .2rem $tkcolor-bg8shadow;
 // $tkshadow-toolbar: 0 0 .2rem $tkcolor-bg8shadow;
-$tktransition-in: 0, 0, 0, 1;
+$tktransition-in: cubic-bezier(0, 0, 0, 1);
 
 .tkcolor-light, .tkcolor-dark,.tkcolor-pr {
 	@extend %color;

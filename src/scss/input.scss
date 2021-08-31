@@ -5,7 +5,7 @@
 		background: var(--tkcolor-bg0);
 		outline: none;
 		-webkit-tap-highlight-color: transparent;
-		transition: box-shadow .1s cubic-bezier($tktransition-in);
+		transition: box-shadow .1s $tktransition-in;
 	}
 	&:hover {
 		box-shadow: 0 0 0 3px var(--tkcolor-bg1);
