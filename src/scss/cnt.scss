@@ -96,27 +96,29 @@
 %cnt--col>%m {
 	--tkms: var(--tkms_);
 }
-.tkcnt--col-2>:nth-child(2n),
-.tkcnt--col-3>:nth-child(3n),
-.tkcnt--col-4>:nth-child(4n),
-.tkcnt--col-5>:nth-child(5n),
-.tkcnt--col-6>:nth-child(6n),
-.tkcnt--col-7>:nth-child(7n),
-.tkcnt--col-8>:nth-child(8n),
-.tkcnt--col-9>:nth-child(9n),
-.tkcnt--col-10>:nth-child(10n) {
-	margin-inline-end: 0;
-}
-.tkcnt--col-2>:nth-last-child(-n+2),
-.tkcnt--col-3>:nth-last-child(-n+3),
-.tkcnt--col-4>:nth-last-child(-n+4),
-.tkcnt--col-5>:nth-last-child(-n+5),
-.tkcnt--col-6>:nth-last-child(-n+6),
-.tkcnt--col-7>:nth-last-child(-n+7),
-.tkcnt--col-8>:nth-last-child(-n+8),
-.tkcnt--col-9>:nth-last-child(-n+9),
-.tkcnt--col-10>:nth-last-child(-n+10) {
-	margin-block-end: 0;
+.tkcnt--col- {
+	&2>:nth-child(2n),
+	&3>:nth-child(3n),
+	&4>:nth-child(4n),
+	&5>:nth-child(5n),
+	&6>:nth-child(6n),
+	&7>:nth-child(7n),
+	&8>:nth-child(8n),
+	&9>:nth-child(9n),
+	&10>:nth-child(10n) {
+		margin-inline-end: 0;
+	}
+	&2>:nth-last-child(-n+2),
+	&3>:nth-last-child(-n+3),
+	&4>:nth-last-child(-n+4),
+	&5>:nth-last-child(-n+5),
+	&6>:nth-last-child(-n+6),
+	&7>:nth-last-child(-n+7),
+	&8>:nth-last-child(-n+8),
+	&9>:nth-last-child(-n+9),
+	&10>:nth-last-child(-n+10) {
+		margin-block-end: 0;
+	}
 }
 
 %arfwrapper {
@@ -184,40 +186,40 @@
 			&8--#{$name} {@include cnt--col(8)}
 			&9--#{$name} {@include cnt--col(9)}
 			&10--#{$name} {@include cnt--col(10)}
-		}
-		.tkcnt--col-2--#{$name}>:nth-child(n),
-		.tkcnt--col-3--#{$name}>:nth-child(n),
-		.tkcnt--col-4--#{$name}>:nth-child(n),
-		.tkcnt--col-5--#{$name}>:nth-child(n),
-		.tkcnt--col-6--#{$name}>:nth-child(n),
-		.tkcnt--col-7--#{$name}>:nth-child(n),
-		.tkcnt--col-8--#{$name}>:nth-child(n),
-		.tkcnt--col-9--#{$name}>:nth-child(n),
-		.tkcnt--col-10--#{$name}>:nth-child(n) {
-			margin-block-end: var(--tkms_);
-			margin-inline-end: var(--tkms_);
-		}
-		.tkcnt--col-2--#{$name}>:nth-child(2n),
-		.tkcnt--col-3--#{$name}>:nth-child(3n),
-		.tkcnt--col-4--#{$name}>:nth-child(4n),
-		.tkcnt--col-5--#{$name}>:nth-child(5n),
-		.tkcnt--col-6--#{$name}>:nth-child(6n),
-		.tkcnt--col-7--#{$name}>:nth-child(7n),
-		.tkcnt--col-8--#{$name}>:nth-child(8n),
-		.tkcnt--col-9--#{$name}>:nth-child(9n),
-		.tkcnt--col-10--#{$name}>:nth-child(10n) {
-			margin-inline-end: 0;
-		}
-		.tkcnt--col-2--#{$name}>:nth-last-child(-n+2),
-		.tkcnt--col-3--#{$name}>:nth-last-child(-n+3),
-		.tkcnt--col-4--#{$name}>:nth-last-child(-n+4),
-		.tkcnt--col-5--#{$name}>:nth-last-child(-n+5),
-		.tkcnt--col-6--#{$name}>:nth-last-child(-n+6),
-		.tkcnt--col-7--#{$name}>:nth-last-child(-n+7),
-		.tkcnt--col-8--#{$name}>:nth-last-child(-n+8),
-		.tkcnt--col-9--#{$name}>:nth-last-child(-n+9),
-		.tkcnt--col-10--#{$name}>:nth-last-child(-n+10) {
-			margin-block-end: 0;
+			&2--#{$name}>:nth-child(n),
+			&3--#{$name}>:nth-child(n),
+			&4--#{$name}>:nth-child(n),
+			&5--#{$name}>:nth-child(n),
+			&6--#{$name}>:nth-child(n),
+			&7--#{$name}>:nth-child(n),
+			&8--#{$name}>:nth-child(n),
+			&9--#{$name}>:nth-child(n),
+			&10--#{$name}>:nth-child(n) {
+				margin-inline-end: var(--tkms_);
+				margin-block-end: var(--tkms_);
+			}
+			&2--#{$name}>:nth-child(2n),
+			&3--#{$name}>:nth-child(3n),
+			&4--#{$name}>:nth-child(4n),
+			&5--#{$name}>:nth-child(5n),
+			&6--#{$name}>:nth-child(6n),
+			&7--#{$name}>:nth-child(7n),
+			&8--#{$name}>:nth-child(8n),
+			&9--#{$name}>:nth-child(9n),
+			&10--#{$name}>:nth-child(10n) {
+				margin-inline-end: 0;
+			}
+			&2--#{$name}>:nth-last-child(-n+2),
+			&3--#{$name}>:nth-last-child(-n+3),
+			&4--#{$name}>:nth-last-child(-n+4),
+			&5--#{$name}>:nth-last-child(-n+5),
+			&6--#{$name}>:nth-last-child(-n+6),
+			&7--#{$name}>:nth-last-child(-n+7),
+			&8--#{$name}>:nth-last-child(-n+8),
+			&9--#{$name}>:nth-last-child(-n+9),
+			&10--#{$name}>:nth-last-child(-n+10) {
+				margin-block-end: 0;
+			}
 		}
 	}
 }
