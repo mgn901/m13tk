@@ -20,9 +20,6 @@
 	font-size: 1rem;
 	font-feature-settings: $tkfont-fontfeature;
 }
-%hasBGColor {background: var(--tkcolor-bg0)}
-%color%cntchip {@extend %hasBGColor;}
-%sticky {@extend %hasBGColor;}
 
 %cnt {
 	@extend %cntchip;
@@ -242,8 +239,4 @@
 	&wrap {flex-wrap: wrap}
 	&trim {overflow: hidden}
 	&noshrinkable {flex-shrink: 0}
-	&bg0 {@extend %hasBGColor;}
-	&bg1 {background: var(--tkcolor-bg1)}
-	&bg2 {background: var(--tkcolor-bg2)}
-	&bg1, &bg2 {>%cnt {@extend %hasBGColor;}}
 }

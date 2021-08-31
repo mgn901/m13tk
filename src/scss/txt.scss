@@ -9,9 +9,6 @@
 	& {@extend %txt;}
 	&-heading {@extend %txt; font-weight: bold}
 	&-small {@extend %txt; font-size: .75rem}
-	&-fg0 {@extend %txt; color: var(--tkcolor-fg0)}
-	&-fg1 {@extend %txt; color: var(--tkcolor-fg1)}
-	&-fg2 {@extend %txt; color: var(--tkcolor-fg2)}
 }
 .tkcnt-txt--small>%txt {
 	font-size: .75rem;
