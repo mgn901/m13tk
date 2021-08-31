@@ -13,17 +13,18 @@
 	&:focus-within {
 		box-shadow: 0 0 0 3px var(--tkcolor-bg2);
 	}
-	&>input[type='text'] {
-		@extend %cntchip;
-		width: 100%;
-		min-height: 1.5rem;
-		height: auto;
-		background: transparent;
-		outline: none;
-		-webkit-tap-highlight-color: transparent;
-	}
 }
-.tkinput-text {
+.tkinputwrapper-text {
 	@extend %input;
 	border-radius: .5rem;
+}
+
+.tkinput-text {
+	@extend %cntchip;
+	width: 100%;
+	min-height: 1.5rem;
+	height: auto;
+	background: transparent;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
 }

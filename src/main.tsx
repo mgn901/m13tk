@@ -80,13 +80,13 @@ export const App: React.FC = () => {
 			<section className='tkcnt-y tkb-normal tkm-4 tkp-3 tkr-3'>
 				<h3 className='tkcnt-x tktxt-heading tkm-3'>ログイン</h3>
 				<div className='tkcnt-x tkcnt-y--s tkcnt-y--xs tkalign-center tkm-3'>
-					<label className='tkcnt-y tkinput-text tkm-3 tkpx-2'>
+					<label className='tkcnt-y tkinputwrapper-text tkm-3 tkpx-2'>
 						<span className='tkcnt-x tktxt-small'>メールアドレス</span>
-						<input type='text' />
+						<input className='tkinput-text' type='text' />
 					</label>
-					<label className='tkcnt-y tkinput-text tkm-3 tkpx-2'>
+					<label className='tkcnt-y tkinputwrapper-text tkm-3 tkpx-2'>
 						<span className='tkcnt-x tktxt-small'>パスワード</span>
-						<input type='text' />
+						<input className='tkinput-text' type='text' />
 					</label>
 					<button className='tkcolor-pr tkchip-x tkbtn-normal tky-12 tkm-3 tkpx-3'>
 						<span className='tktxt-fg0'>ログイン</span>
