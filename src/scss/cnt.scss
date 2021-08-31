@@ -136,7 +136,7 @@
 	--tkax: #{$x};
 	--tkay: #{$y};
 }
-.tkarfwrapper-{
+.tkarfwrapper- {
 	&1-1 {@include arfwrapper(1, 1)}
 	&16-9 {@include arfwrapper(16, 9)}
 	&9-16 {@include arfwrapper(9, 16)}
