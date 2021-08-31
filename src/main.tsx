@@ -69,7 +69,7 @@ export const App: React.FC = () => {
 			</section>
 			<section className='tkcnt-y tkb-normal tkm-4 tkr-3'>
 				<div className='tkcnt-x tkarfwrapper-16-9 tkm-3'>
-					<img className='tkimg tkcnt-x tkr-tl-3 tkr-tr-3' src='https://i.gyazo.com/thumb/400/f5de61f6e46d57e35727b403b7e58ee9-jpg.jpg' />
+					<img className='tkimg tkcnt-x tkr-tl-3 tkr-tr-3' src='https://i.gyazo.com/thumb/400/3bac69f02faa4850dd8e53df21cdf4bd-jpg.jpg' />
 				</div>
 				<div className='tkcnt-txt tkm-3 tkpx-3'>
 					<h3 className='tktxt-heading'>国営昭和記念公園</h3>
