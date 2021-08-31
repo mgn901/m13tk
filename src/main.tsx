@@ -26,7 +26,7 @@ export const App: React.FC = () => {
 		}
 	];
 	const renderedSampleMemos = sampleMemos.map((item, idx) => {
-		return <a key={idx} className='tkcnt-x tkbtn-flat tkxy-1-1 tkm-1 tkr-1'>
+		return <a key={idx} className='tkcnt-x tkbtn-flat tkarfwrapper-1-1 tkm-1 tkr-1'>
 			<div className='tkcnt-y tkp-2'>
 				<h4 className='tkcnt-txt tkcnt--noshrinkable tkcnt--trim tky-12 tkm-1'>
 					<span className='tktxt-heading'>{item.name}</span>
@@ -68,8 +68,8 @@ export const App: React.FC = () => {
 				</div>
 			</section>
 			<section className='tkcnt-y tkb-normal tkm-4 tkr-3'>
-				<div className='tkcnt-x tkxy-16-9 tkm-3'>
-					<img className='tkimg tkcnt-x tkr-tl-3 tkr-tr-3' src='https://i.gyazo.com/thumb/400/f5de61f6e46d57e35727b403b7e58ee9-jpg.jpg' />
+				<div className='tkcnt-x tkarfwrapper-16-9 tkm-3'>
+					<img className='tkimg tkcnt-x tkr-tl-3 tkr-tr-3' src='https://i.gyazo.com/thumb/400/3bac69f02faa4850dd8e53df21cdf4bd-jpg.jpg' />
 				</div>
 				<div className='tkcnt-txt tkm-3 tkpx-3'>
 					<h3 className='tktxt-heading'>国営昭和記念公園</h3>
@@ -95,7 +95,7 @@ export const App: React.FC = () => {
 			</section>
 			<section className='tkcnt-y tkb-normal tkm-4 tkp-3 tkr-3'>
 				<h3 className='tkcnt-x tktxt-heading tkm-3'>メモ一覧</h3>
-				<div className='tkcnt-x tkcnt-x--col4--xl tkcnt-x--col4--l tkcnt-x--col4--m tkcnt-x--col3--s tkcnt-x--col2--xs tkcnt--wrap tkcnt--bg1 tkm-3 tkp-1 tkr-2'>
+				<div className='tkcnt-x tkcnt--col-4 tkcnt--col-3--s tkcnt--col-2--xs tkcnt--col-2--80 tkcnt--wrap tkcnt--bg1 tkm-3 tkp-1 tkr-2'>
 					{renderedSampleMemos}
 				</div>
 			</section>
