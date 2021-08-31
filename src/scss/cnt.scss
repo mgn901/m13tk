@@ -28,8 +28,10 @@
 	@extend %cntchip;
 	--tkms: 0rem;
 	--tkms_: 0rem;
+	--tkps_: 0rem;
 	width: calc(100% - var(--tkms));
 	margin-block-end: var(--tkms);
+	padding: var(--tkps_);
 }
 .tkcnt-x {
 	@extend %cnt;
