@@ -57,19 +57,19 @@
 }
 
 %px {
-	padding-inline-start: var(--tkps_);
-	padding-inline-end: var(--tkps_);
+	padding-inline-start: var(--tkps);
+	padding-inline-end: var(--tkps);
 	padding-block-start: 0;
 	padding-block-end: 0;
 }
 %py {
 	padding-inline-start: 0;
 	padding-inline-end: 0;
-	padding-block-start: var(--tkps_);
-	padding-block-end: var(--tkps_);
+	padding-block-start: var(--tkps);
+	padding-block-end: var(--tkps);
 }
 @mixin p($i) {
-	--tkps_: #{$i * .25rem};
+	--tkps: #{$i * .25rem};
 }
 .tkp {
 	&-0, &x-0, &y-0 {@include p(0)}

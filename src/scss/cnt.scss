@@ -28,10 +28,10 @@
 	@extend %cntchip;
 	--tkms: 0rem;
 	--tkms_: 0rem;
-	--tkps_: 0rem;
-	width: calc(100% - var(--tkms));
-	margin-block-end: var(--tkms);
-	padding: var(--tkps_);
+	--tkps: 0rem;
+	width: calc(100% - var(--tkms_));
+	margin-block-end: var(--tkms_);
+	padding: var(--tkps);
 }
 .tkcnt-x {
 	@extend %cnt;
@@ -40,7 +40,7 @@
 	justify-content: flex-start;
 	flex-direction: row;
 	&>%cntchip {
-		margin-inline-end: var(--tkms_);
+		margin-inline-end: var(--tkms);
 		margin-block-end: 0;
 	}
 	>:last-child {
@@ -55,7 +55,7 @@
 	flex-direction: column;
 	&>%cntchip {
 		margin-inline-end: 0;
-		margin-block-end: var(--tkms_);
+		margin-block-end: var(--tkms);
 	}
 	>:last-child {
 		margin-block-end: 0; 
@@ -64,7 +64,7 @@
 
 @mixin m($m) {
 	@extend %m;
-	--tkms_: #{.25rem * $m};
+	--tkms: #{.25rem * $m};
 }
 .tkm- {
 	&0 {@include m(0)}
@@ -91,12 +91,12 @@
 	&10 {@extend %cnt--col; @include cnt--col(10)}
 }
 %cnt--col>%cnt {
-	width: calc(100% / var(--tkcol) - var(--tkms) * ((var(--tkcol) - 1) / var(--tkcol)));
-	margin-inline-end: var(--tkms_);
-	margin-block-end: var(--tkms_);
+	width: calc(100% / var(--tkcol) - var(--tkms_) * ((var(--tkcol) - 1) / var(--tkcol)));
+	margin-inline-end: var(--tkms);
+	margin-block-end: var(--tkms);
 }
 %cnt--col>%m {
-	--tkms: var(--tkms_);
+	--tkms_: var(--tkms);
 }
 .tkcnt--col- {
 	&2>:nth-child(2n),
@@ -126,7 +126,7 @@
 %arfwrapper {
 	position: relative;
 	height: 0;
-	padding-block-end: calc((100% / var(--tkcol, 1) - var(--tkms) * ((var(--tkcol, 1) - 1) / var(--tkcol, 1))) * var(--tkay) / var(--tkax));
+	padding-block-end: calc((100% / var(--tkcol, 1) - var(--tkms_) * ((var(--tkcol, 1) - 1) / var(--tkcol, 1))) * var(--tkay) / var(--tkax));
 	>%cnt {
 		position: absolute;
 		width: 100%;
@@ -158,7 +158,7 @@
 			justify-content: flex-start;
 			flex-direction: row;
 			&>%cntchip {
-				margin-inline-end: var(--tkms_);
+				margin-inline-end: var(--tkms);
 				margin-block-end: 0;
 			}
 			>:last-child {
@@ -172,7 +172,7 @@
 			flex-direction: column;
 			&>%cntchip {
 				margin-inline-end: 0;
-				margin-block-end: var(--tkms_);
+				margin-block-end: var(--tkms);
 			}
 			>:last-child {
 				margin-block-end: 0;
@@ -197,8 +197,8 @@
 			&8--#{$name}>:nth-child(n),
 			&9--#{$name}>:nth-child(n),
 			&10--#{$name}>:nth-child(n) {
-				margin-inline-end: var(--tkms_);
-				margin-block-end: var(--tkms_);
+				margin-inline-end: var(--tkms);
+				margin-block-end: var(--tkms);
 			}
 			&2--#{$name}>:nth-child(2n),
 			&3--#{$name}>:nth-child(3n),
