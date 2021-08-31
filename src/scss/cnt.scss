@@ -89,7 +89,7 @@
 	&10 {@extend %cnt--col; @include cnt--col(10)}
 }
 %cnt--col>%cnt {
-	width: calc(100% / var(--tkcol) - var(--tkms) * ((var(--tkcol, 1) - 1) / var(--tkcol, 1)));
+	width: calc(100% / var(--tkcol) - var(--tkms) * ((var(--tkcol) - 1) / var(--tkcol)));
 	margin-inline-end: var(--tkms_);
 	margin-block-end: var(--tkms_);
 }
