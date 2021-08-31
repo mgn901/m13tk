@@ -18,13 +18,14 @@ $tkcolor-bg7: #403d3a;
 $tkcolor-bg8: #251d13;
 $tkcolor-bg0shadow: #f9f8f440;
 $tkcolor-bg8shadow: #251d1340;
+$tkcolor-pr0shadow: #cce2f540;
 $tkcolor-pr8shadow: #00457140;
 $tkfont-sans: Inter, Roboto, '源ノ角ゴシック JP', 'Noto Sans JP', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Segoe UI', 'メイリオ', Meiryo, sans-serif;
 $tkfont-serif: '源ノ明朝 JP', 'Noto Serif JP', ui-serif, 'NewYork', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', 'Yu Mincho', serif;
 $tkfont-monospace: 'Roboto Mono', '源ノ角ゴシック JP', 'Noto Sans JP', ui-monospace, 'SF Mono', 'SFMono-Regular', 'Dejavu Sans Mono', Menlo, Consolas, BlinkMacSystemFont, Meiryo, monospace;
 $tkfont-fontfeature: 'cv02', 'cv03', 'cv04', 'cv05', 'cv06', 'cv08', 'zero';
-$tkshadow-btn: 0 .025rem .125rem 0rem var(--tkcolor-shadow);
-$tkshadow-btn-transparent: 0 .025rem 0 transparent;
+$tkshadow-btn: 0 1px 0 0 var(--tkcolor-bg2);
+$tkshadow-btn-transparent: 0 0 0 var(--tkcolor-bg2);
 // $tkshadow-card: 0 .1rem .2rem $tkcolor-bg8shadow;
 // $tkshadow-toolbar: 0 0 .2rem $tkcolor-bg8shadow;
 $tktransition-in: cubic-bezier(0, 0, 0, 1);
@@ -54,6 +55,7 @@ $tktransition-in: cubic-bezier(0, 0, 0, 1);
 	--tkcolor-bg0:#{$tkcolor-pr4};
 	--tkcolor-bg1:#{$tkcolor-pr3};
 	--tkcolor-bg2:#{$tkcolor-pr2};
+	--tkcolor-shadow:#{$tkcolor-pr0shadow};
 }
 .tkcolor-pr, .tkcolor-light .tkcolor-pr {
 	--tkcolor-bg0:#{$tkcolor-pr4};
@@ -78,11 +80,13 @@ $tktransition-in: cubic-bezier(0, 0, 0, 1);
 		--tkcolor-bg0:#{$tkcolor-pr4};
 		--tkcolor-bg1:#{$tkcolor-pr5};
 		--tkcolor-bg2:#{$tkcolor-pr6};
+		--tkcolor-shadow:#{$tkcolor-pr8shadow};
 	}
 	.tkcolor-pr, .tkcolor-dark .tkcolor-pr {
 		--tkcolor-bg0:#{$tkcolor-pr4};
 		--tkcolor-bg1:#{$tkcolor-pr3};
 		--tkcolor-bg2:#{$tkcolor-pr2};
+		--tkcolor-shadow:#{$tkcolor-pr0shadow};
 	}
 }
 

@@ -1,14 +1,14 @@
 %input {
 	& {
 		border: 1px var(--tkcolor-bg2) solid;
-		box-shadow: 0 0 0 0px var(--tkcolor-bg1);
+		box-shadow: 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg0);
 		outline: none;
 		-webkit-tap-highlight-color: transparent;
 		transition: box-shadow .1s $tktransition-in;
 	}
 	&:hover {
-		box-shadow: 0 0 0 3px var(--tkcolor-bg1);
+		box-shadow: 0 0 0 3px var(--tkcolor-shadow);
 	}
 	&:focus-within {
 		box-shadow: 0 0 0 3px var(--tkcolor-bg2);
