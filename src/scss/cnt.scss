@@ -21,7 +21,7 @@
 	font-feature-settings: $tkfont-fontfeature;
 }
 %hasBGColor {background: var(--tkcolor-bg0)}
-%color {&%cntchip {@extend %hasBGColor;}}
+%color%cntchip {@extend %hasBGColor;}
 %sticky {@extend %hasBGColor;}
 
 %cnt {
