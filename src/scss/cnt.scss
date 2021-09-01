@@ -161,8 +161,8 @@
 @mixin at-media($w, $name) {
 	$w2: ($w - 40) * 4 + 1px;
 	@if ($w <= 100) {$w2: 0}
-	$query: '(min-width: #{$w2}) and (max-width: #{4px * $w})';
-	@if ($w >= 260) {$query: '(min-width: #{$w2})'}
+	$query: '(min-width:#{$w2}) and (max-width:#{4px * $w})';
+	@if ($w >= 260) {$query: '(min-width:#{$w2})'}
 	@media #{$query} {
 		.tkcnt-x--#{$name} {
 			display: flex;
