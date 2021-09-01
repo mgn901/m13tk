@@ -8,12 +8,12 @@ import './scss/style.scss';
 
 export const App: React.FC = () => {
 	return <div className='tkcnt-y tkalign-center'>
-		<header className='tkcnt-x tksticky-top tkjustify-center tkpy-3 tkshadow-2'>
+		<header className='tkcnt-x tksticky-top tkjustify-center tkm-6 tkpy-3 tkshadow-2'>
 			<div className='tkcnt-x tkx-160 tkpx-4'>
 				<a className='tkbtn-text tktxt-heading'>m13TK</a>
 			</div>
 		</header>
-		<main className='tkcnt-y tkx-160 tkm-4 tkp-4'>
+		<main className='tkcnt-y tkx-160 tkm-6 tkpx-4 tkpy-6'>
 			<section className='tkcnt-txt'>
 				<h1 className='tkpage-h1'>m13TK: ラクするためのCSSフレームワーク</h1>
 				<p className='tkpage-p'>CSSのFlexible Box LayoutやCustom Propertiesを活用している、高速なレイアウトの構築を支援するCSSフレームワークです。</p>
@@ -24,7 +24,7 @@ export const App: React.FC = () => {
 			<PictureCard />
 			<InputDepAndArr />
 		</main>
-		<footer className='tkcnt-x tkjustify-center tkm-4 tkpy-4'>
+		<footer className='tkcnt-x tkjustify-center tkm-6 tkpy-6'>
 			<div className='tkcnt-x tkjustify-center tkx-160 tkpx-4'>&copy; 2021- Meganesium2001 (mgn901)</div>
 		</footer>
 	</div>
