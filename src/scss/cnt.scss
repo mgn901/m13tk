@@ -190,6 +190,7 @@
 			}
 		}
 		.tkcnt--col- {
+			&1--#{$name} {@include cnt--col(1)}
 			&2--#{$name} {@include cnt--col(2)}
 			&3--#{$name} {@include cnt--col(3)}
 			&4--#{$name} {@include cnt--col(4)}
@@ -211,6 +212,7 @@
 				margin-inline-end: var(--tkms);
 				margin-block-end: var(--tkms);
 			}
+			&1--#{$name}>:nth-child(n),
 			&2--#{$name}>:nth-child(2n),
 			&3--#{$name}>:nth-child(3n),
 			&4--#{$name}>:nth-child(4n),
@@ -222,6 +224,7 @@
 			&10--#{$name}>:nth-child(10n) {
 				margin-inline-end: 0;
 			}
+			&1--#{$name}>:nth-last-child(-n+1),
 			&2--#{$name}>:nth-last-child(-n+2),
 			&3--#{$name}>:nth-last-child(-n+3),
 			&4--#{$name}>:nth-last-child(-n+4),
