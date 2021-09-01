@@ -8,11 +8,11 @@
 	vertical-align: top;
 }
 .tkchip-x {
-	@extend %chip;
+	@extend %chip, %cntchip-x;
 	flex-direction: row;
 }
 .tkchip-y {
-	@extend %chip;
+	@extend %chip, %cntchip-y;
 	flex-direction: column;
 }
 .tkchip--shrinkable {

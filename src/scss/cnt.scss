@@ -26,6 +26,24 @@
 .tkcolor-{&bg1, &bg2 {>%cntchip {
 	background: var(--tkcolor-bg0);
 }}}
+%cntchip-x {
+	&>%cntchip, &>%txt {
+		margin-inline-end: var(--tkms);
+		margin-block-end: 0;
+	}
+	>:last-child {
+		margin-inline-end: 0;
+	}
+}
+%cntchip-y {
+	&>%cntchip, &>%txt {
+		margin-inline-end: 0;
+		margin-block-end: var(--tkms);
+	}
+	>:last-child {
+		margin-block-end: 0; 
+	}
+}
 
 %cnt {
 	@extend %cntchip;
@@ -37,32 +55,18 @@
 	padding: var(--tkps);
 }
 .tkcnt-x {
-	@extend %cnt;
+	@extend %cnt, %cntchip-x;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: row;
-	&>%cntchip {
-		margin-inline-end: var(--tkms);
-		margin-block-end: 0;
-	}
-	>:last-child {
-		margin-inline-end: 0;
-	}
 }
 .tkcnt-y {
-	@extend %cnt;
+	@extend %cnt, %cntchip-y;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: column;
-	&>%cntchip {
-		margin-inline-end: 0;
-		margin-block-end: var(--tkms);
-	}
-	>:last-child {
-		margin-block-end: 0; 
-	}
 }
 
 @mixin m($m) {
@@ -160,7 +164,7 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: row;
-			&>%cntchip {
+			&>%cntchip, &>%txt {
 				margin-inline-end: var(--tkms);
 				margin-block-end: 0;
 			}
@@ -173,7 +177,7 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
-			&>%cntchip {
+			&>%cntchip, &>%txt {
 				margin-inline-end: 0;
 				margin-block-end: var(--tkms);
 			}
@@ -239,6 +243,9 @@
 	&--small {
 		line-height: 1rem;
 		font-size: .75rem;
+	}
+	&>%txt {
+		margin: 0;
 	}
 }
 .tkcnt-- {
