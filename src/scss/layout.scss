@@ -137,6 +137,7 @@
 %sticky {
 	position: sticky;
 	z-index: 1;
+	background: var(--tkcolor-bg0);
 }
 .tksticky {
 	&-top {@extend %sticky; top: 0}

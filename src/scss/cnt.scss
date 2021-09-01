@@ -20,6 +20,12 @@
 	font-size: 1rem;
 	font-feature-settings: $tkfont-fontfeature;
 }
+%cntchip%color {
+	background: var(--tkcolor-bg0);
+}
+.tkcolor-{&bg1, &bg2 {>%cntchip {
+	background: var(--tkcolor-bg0);
+}}}
 
 %cnt {
 	@extend %cntchip;

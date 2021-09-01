@@ -1,7 +1,3 @@
-%hasBGColor {background: var(--tkcolor-bg0)}
-%color%cntchip {@extend %hasBGColor;}
-%sticky {@extend %hasBGColor;}
-
 .tkcolor-light, .tkcolor-dark, .tkcolor-pr {
 	@extend %color;
 }
@@ -63,10 +59,9 @@
 }
 
 .tkcolor- {
-	&bg0 {@extend %hasBGColor;}
+	&bg0 {background: var(--bg0);}
 	&bg1 {background: var(--tkcolor-bg1)}
 	&bg2 {background: var(--tkcolor-bg2)}
-	&bg1, &bg2 {>%cntchip {@extend %hasBGColor;}}
 	&fg0 {color: var(--tkcolor-fg0)}
 	&fg1 {color: var(--tkcolor-fg1)}
 	&fg2 {color: var(--tkcolor-fg2)}
