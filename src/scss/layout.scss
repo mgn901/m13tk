@@ -57,38 +57,43 @@
 }
 
 %px {
-	padding-inline-start: var(--tkps);
-	padding-inline-end: var(--tkps);
-	padding-block-start: 0;
-	padding-block-end: 0;
+	padding-inline-start: var(--tkpx);
+	padding-inline-end: var(--tkpx);
 }
 %py {
-	padding-inline-start: 0;
-	padding-inline-end: 0;
-	padding-block-start: var(--tkps);
-	padding-block-end: var(--tkps);
+	padding-block-start: var(--tkpy);
+	padding-block-end: var(--tkpy);
 }
-@mixin p($i) {
-	--tkps:#{$i * .25rem};
+@mixin px($i) {
+	@extend %px;
+	--tkpx:#{$i * .25rem};
+}
+@mixin py($i) {
+	@extend %py;
+	--tkpy:#{$i * .25rem};
 }
 .tkp {
-	&-0, &x-0, &y-0 {@include p(0)}
-	&-1, &x-1, &y-1 {@include p(1)}
-	&-2, &x-2, &y-2 {@include p(2)}
-	&-3, &x-3, &y-3 {@include p(3)}
-	&-4, &x-4, &y-4 {@include p(4)}
-	&-5, &x-5, &y-5 {@include p(5)}
-	&-6, &x-6, &y-6 {@include p(6)}
-	&x {
-		&-0, &-1, &-2, &-3, &-4, &-5, &-6 {
-			@extend %px;
-		}
-	}
-	&y {
-		&-0, &-1, &-2, &-3, &-4, &-5, &-6 {
-			@extend %py;
-		}
-	}
+	&-0 {@include px(0); @include py(0)}
+	&-1 {@include px(1); @include py(1)}
+	&-2 {@include px(2); @include py(2)}
+	&-3 {@include px(3); @include py(3)}
+	&-4 {@include px(4); @include py(4)}
+	&-5 {@include px(5); @include py(5)}
+	&-6 {@include px(6); @include py(6)}
+	&x-0 {@include px(0)}
+	&x-1 {@include px(1)}
+	&x-2 {@include px(2)}
+	&x-3 {@include px(3)}
+	&x-4 {@include px(4)}
+	&x-5 {@include px(5)}
+	&x-6 {@include px(6)}
+	&y-0 {@include py(0)}
+	&y-1 {@include py(1)}
+	&y-2 {@include py(2)}
+	&y-3 {@include py(3)}
+	&y-4 {@include py(4)}
+	&y-5 {@include py(5)}
+	&y-6 {@include py(6)}
 }
 
 .tkb-normal {border: 1px var(--tkcolor-bg2) solid}

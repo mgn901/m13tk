@@ -1,7 +1,8 @@
 %cntchip {
 	--tkms:0rem;
 	--tkms_:0rem;
-	--tkps:0rem;
+	--tkpx:0rem;
+	--tkpy:0rem;
 	min-width: 0;
 	max-width: 100%;
 	min-height: 1.5rem;
@@ -50,9 +51,6 @@
 
 %cnt {
 	@extend %cntchip;
-	--tkms:0rem;
-	--tkms_:0rem;
-	--tkps:0rem;
 	--tkcol:1;
 	width: calc(100% - var(--tkms_));
 	margin-block-end: var(--tkms_);
