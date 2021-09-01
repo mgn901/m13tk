@@ -50,6 +50,7 @@
 	--tkms: 0rem;
 	--tkms_: 0rem;
 	--tkps: 0rem;
+	--tkcol: 1;
 	width: calc(100% - var(--tkms_));
 	margin-block-end: var(--tkms_);
 	padding: var(--tkps);
@@ -85,6 +86,9 @@
 
 @mixin cnt--col($c) {
 	--tkcol: #{$c};
+	>%cnt {
+		--tkcol: #{$c};
+	}
 }
 .tkcnt--col- {
 	&2 {@extend %cnt--col; @include cnt--col(2)}
