@@ -47,10 +47,10 @@
 
 %cnt {
 	@extend %cntchip;
-	--tkms: 0rem;
-	--tkms_: 0rem;
-	--tkps: 0rem;
-	--tkcol: 1;
+	--tkms:0rem;
+	--tkms_:0rem;
+	--tkps:0rem;
+	--tkcol:1;
 	width: calc(100% - var(--tkms_));
 	margin-block-end: var(--tkms_);
 	padding: var(--tkps);
@@ -72,7 +72,7 @@
 
 @mixin m($m) {
 	@extend %m;
-	--tkms: #{.25rem * $m};
+	--tkms:#{.25rem * $m};
 }
 .tkm- {
 	&0 {@include m(0)}
@@ -85,9 +85,9 @@
 }
 
 @mixin cnt--col($c) {
-	--tkcol: #{$c};
+	--tkcol:#{$c};
 	>%cnt {
-		--tkcol: #{$c};
+		--tkcol:#{$c};
 	}
 }
 .tkcnt--col- {
@@ -107,7 +107,7 @@
 	margin-block-end: var(--tkms);
 }
 %cnt--col>%m {
-	--tkms_: var(--tkms);
+	--tkms_:var(--tkms);
 }
 .tkcnt--col- {
 	&2>:nth-child(2n),
@@ -146,8 +146,8 @@
 }
 @mixin arfwrapper($x, $y) {
 	@extend %arfwrapper;
-	--tkax: #{$x};
-	--tkay: #{$y};
+	--tkax:#{$x};
+	--tkay:#{$y};
 }
 .tkarfwrapper- {
 	&1-1 {@include arfwrapper(1, 1)}

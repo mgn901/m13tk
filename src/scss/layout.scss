@@ -69,7 +69,7 @@
 	padding-block-end: var(--tkps);
 }
 @mixin p($i) {
-	--tkps: #{$i * .25rem};
+	--tkps:#{$i * .25rem};
 }
 .tkp {
 	&-0, &x-0, &y-0 {@include p(0)}
