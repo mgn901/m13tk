@@ -14,7 +14,7 @@ export const PictureCard: React.FC = () => {
 					</div>
 				</div>
 				<button className='tkcolor-pr tkcnt-x tkcnt--noshrinkable tkbtn-flat tkm-3 tkp-3 tkr-bl-3 tkr-br-3'>
-					<span className='tktxt-fg0'>もっと見る</span>
+					<span className='tkcolor-fg0'>もっと見る</span>
 				</button>
 			</div>
 		</div>

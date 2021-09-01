@@ -7,8 +7,8 @@ export const ShortPost: React.FC = () => {
 			<div className='tkcnt-x tkjustify-between'>
 				<div className='tkchip-x tkchip--shrinkable tkm-2'>
 					<span className='tktxt-heading tktxt--shrinkable tkcolor-fg0 tkm-2'>Meganesium2001</span>
-					<span className='tktxt tktxt--shrinkable tkm-2'>@mgn901</span>
-					<span className='tktxt tkm-2'>1h</span>
+					<span className='tktxt tktxt--shrinkable tkcolor-fg2 tkm-2'>@mgn901</span>
+					<span className='tktxt tkcolor-fg2 tkm-2'>1h</span>
 				</div>
 				<button className='tkchip-x tkbtn-normal tkm-2 tkpx-2'>共有</button>
 			</div>
