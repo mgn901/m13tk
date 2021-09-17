@@ -16,7 +16,8 @@ let plugins = [
 	commonjs(),
 	scss({
 		output: './dist/style.css',
-		outputStyle: 'compressed'
+		outputStyle: 'compressed',
+		watch: 'src/scss'
 	})
 ]
 
@@ -36,7 +37,7 @@ export default {
 		format: 'umd',
 		name: 'm13tk'
 	},
-  host: '0.0.0.0',
-  port: 10001,
+	host: '0.0.0.0',
+	port: 10001,
 	plugins
 }
