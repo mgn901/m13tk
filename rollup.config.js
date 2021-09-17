@@ -34,10 +34,7 @@ export default {
 	output: {
 		dir: 'dist',
 		format: 'umd',
-		name: 'mgumtk'
-	},
-	watch: {
-		include: 'src/**'
+		name: 'm13tk'
 	},
   host: '0.0.0.0',
   port: 10001,
