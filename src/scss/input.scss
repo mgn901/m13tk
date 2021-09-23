@@ -3,8 +3,6 @@
 		border: 1px var(--tkcolor-bg2) solid;
 		box-shadow: 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg0);
-		outline: none;
-		-webkit-tap-highlight-color: transparent;
 		transition: box-shadow .1s $tktransition-in;
 	}
 	&:hover {
@@ -22,9 +20,70 @@
 .tkinput-text {
 	@extend %cntchip;
 	width: 100%;
-	min-height: 1.5rem;
-	height: auto;
 	background: transparent;
-	outline: none;
-	-webkit-tap-highlight-color: transparent;
+}
+
+%checkboxradio {
+	@extend %cntchip;
+	width: 1rem;
+	min-height: 1rem;
+	margin-top: .25rem;
+	border: 1px var(--tkcolor-fg2) solid;
+	border-radius: .25rem;
+	background: var(--tkcolor-bg0);
+	box-shadow: $tkshadow-btn, 0 0 0 0px var(--tkcolor-shadow);
+	transition: box-shadow .1s $tktransition-in, background .1s $tktransition-in;
+	&:hover, &:focus {
+		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow);
+	}
+	&:active {
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
+		background: var(--tkcolor-bg1);
+	}
+}
+
+.tkinput-checkbox {
+	@extend %checkboxradio;
+	position: relative;
+	&:checked {
+		border: 1px var(--tkcolor-fg0) solid;
+		background: var(--tkcolor-fg0);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 2px;
+		left: 1px;
+		width: .6rem;
+		height: .3rem;
+		box-sizing: content-box;
+		border-left: 2px transparent solid;
+		border-bottom: 2px transparent solid;
+		transform: rotate(-45deg);
+	}
+	&:checked::before {
+		border-left: 2px var(--tkcolor-bg0) solid;
+		border-bottom: 2px var(--tkcolor-bg0) solid;
+	}
+}
+
+.tkinput-radio {
+	@extend %checkboxradio;
+	border-radius: 50%;
+	&:hover, &:focus {
+		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 0 var(--tkcolor-fg0) inset;
+	}
+	&:active {
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 0 var(--tkcolor-fg0) inset;
+	}
+	&:checked {
+		border: 1px var(--tkcolor-fg0) solid;
+		box-shadow: $tkshadow-btn, 0 0 0 0 var(--tkcolor-shadow), 0 0 0 3px var(--tkcolor-fg0) inset;
+	}
+	&:hover:checked, &:focus:checked {
+		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 3px var(--tkcolor-fg0) inset;
+	}
+	&:active:checked {
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 3px var(--tkcolor-fg0) inset;
+	}
 }
