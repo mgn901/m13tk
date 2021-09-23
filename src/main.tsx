@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ArticleCardList } from './sampleComponents/ArticleCardList';
 import { InputDepAndArr } from './sampleComponents/InputDepAndArr';
+import { MiscComponents } from './sampleComponents/MiscComponents';
 import { PictureCard } from './sampleComponents/PictureCard';
 import { ShortPost } from './sampleComponents/shortPost';
 import './scss/style.scss';
@@ -23,6 +24,7 @@ export const App: React.FC = () => {
 			<ArticleCardList />
 			<PictureCard />
 			<InputDepAndArr />
+			<MiscComponents />
 		</main>
 		<footer className='tkcnt-x tkjustify-center tkm-6 tkpy-6'>
 			<div className='tkcnt-x tkjustify-center tkx-160 tkpx-4'>&copy; 2021- Meganesium2001 (mgn901)</div>
