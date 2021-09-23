@@ -17,6 +17,9 @@
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg1);
 	}
+	&:disabled {
+		opacity: .3;
+	}
 }
 .tkbtn-normal {
 	@extend %btn;

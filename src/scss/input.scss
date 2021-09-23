@@ -12,6 +12,7 @@
 		box-shadow: 0 0 0 3px var(--tkcolor-bg2);
 	}
 }
+
 .tkinputwrapper-text {
 	@extend %input;
 	border-radius: .5rem;
@@ -39,6 +40,9 @@
 	&:active {
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg1);
+	}
+	&:disabled {
+		opacity: .3;
 	}
 }
 
@@ -86,4 +90,12 @@
 	&:active:checked {
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 3px var(--tkcolor-fg0) inset;
 	}
+}
+
+.tkinput-range {
+
+}
+
+.tkinput-progress {
+
 }
