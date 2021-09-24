@@ -5,21 +5,16 @@
 	"main": "src/style.scss",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "rollup -c --environment BUILD:production",
-		"start": "rollup -c -w --environment BUILD:development"
+		"build": "sass src/scss/style.scss dist/style.css --style compressed --no-source-map"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/mgn901/m13tk.git"
 	},
 	"keywords": ["css", "sass", "framework"],
-	"author": "mgn901",
+	"author": "mgn901 <mgn901+dev@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"rollup": "^2.56.1",
-		"rollup-plugin-replace": "^2.2.0",
-		"rollup-plugin-scss": "^3.0.0",
-		"rollup-plugin-serve": "^1.1.0",
 		"sass": "^1.37.5"
 	},
 	"dependencies": {
