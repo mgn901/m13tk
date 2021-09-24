@@ -1,6 +1,6 @@
 {
 	"name": "@mgn901/m13tk",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A CSS Framework to create UI instantly.",
 	"main": "src/style.scss",
 	"scripts": {
@@ -11,12 +11,15 @@
 		"type": "git",
 		"url": "git+https://github.com/mgn901/m13tk.git"
 	},
-	"keywords": ["css", "sass", "framework"],
+	"keywords": [
+		"css",
+		"sass",
+		"framework"
+	],
 	"author": "mgn901 <mgn901+dev@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
 		"sass": "^1.37.5"
 	},
-	"dependencies": {
-	}
+	"dependencies": {}
 }
