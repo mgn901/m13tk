@@ -16,23 +16,12 @@
 	&-around {justify-content: space-around}
 }
 
-%tkxy {
-	position: relative;
-	width: 100%;
-	height: 0;
-	>%cnt {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
+@mixin x($x) {
+	width: $x * .25rem
 }
-@mixin x($x) {width: $x * .25rem}
 @mixin y($y) {
 	height: $y * .25rem;
 	max-height: $y * .25rem;
-}
-@mixin tkxy($x, $y) {
-	padding-bottom: 100% * math.div($y, $x);
 }
 .tkx {
 	&-4 {@include x(4)}
@@ -66,47 +55,45 @@
 	&-240 {@include y(240)}
 	&-fit {height: 100%}
 }
-.tkxy-1-1 {@extend %tkxy; @include tkxy(1, 1)}
-.tkxy-4-3 {@extend %tkxy; @include tkxy(4, 3)}
-.tkxy-16-9 {@extend %tkxy; @include tkxy(16, 9)}
-.tkxy-3-4 {@extend %tkxy; @include tkxy(3, 4)}
-.tkxy-9-16 {@extend %tkxy; @include tkxy(9, 16)}
 
-@mixin p($i) {padding: $i * .25rem}
-@mixin py($i) {
-	padding-top: $i * .25rem;
-	padding-bottom: $i * .25rem;
+%px {
+	padding-inline-start: var(--tkpx);
+	padding-inline-end: var(--tkpx);
+}
+%py {
+	padding-block-start: var(--tkpy);
+	padding-block-end: var(--tkpy);
 }
 @mixin px($i) {
-	padding-left: $i * .25rem;
-	padding-right: $i * .25rem;
+	@extend %px;
+	--tkpx:#{$i * .25rem};
+}
+@mixin py($i) {
+	@extend %py;
+	--tkpy:#{$i * .25rem};
 }
 .tkp {
-	&-0 {@include p(0)}
-	&-1 {@include p(1)}
-	&-2 {@include p(2)}
-	&-3 {@include p(3)}
-	&-4 {@include p(4)}
-	&-5 {@include p(5)}
-	&-6 {@include p(6)}
-	&y {
-		&-0 {@include py(0)}
-		&-1 {@include py(1)}
-		&-2 {@include py(2)}
-		&-3 {@include py(3)}
-		&-4 {@include py(4)}
-		&-5 {@include py(5)}
-		&-6 {@include py(6)}
-	}
-	&x {
-		&-0 {@include px(0)}
-		&-1 {@include px(1)}
-		&-2 {@include px(2)}
-		&-3 {@include px(3)}
-		&-4 {@include px(4)}
-		&-5 {@include px(5)}
-		&-6 {@include px(6)}
-	}
+	&-0 {@include px(0); @include py(0)}
+	&-1 {@include px(1); @include py(1)}
+	&-2 {@include px(2); @include py(2)}
+	&-3 {@include px(3); @include py(3)}
+	&-4 {@include px(4); @include py(4)}
+	&-5 {@include px(5); @include py(5)}
+	&-6 {@include px(6); @include py(6)}
+	&x-0 {@include px(0)}
+	&x-1 {@include px(1)}
+	&x-2 {@include px(2)}
+	&x-3 {@include px(3)}
+	&x-4 {@include px(4)}
+	&x-5 {@include px(5)}
+	&x-6 {@include px(6)}
+	&y-0 {@include py(0)}
+	&y-1 {@include py(1)}
+	&y-2 {@include py(2)}
+	&y-3 {@include py(3)}
+	&y-4 {@include py(4)}
+	&y-5 {@include py(5)}
+	&y-6 {@include py(6)}
 }
 
 .tkb-normal {border: 1px var(--tkcolor-bg2) solid}
@@ -155,6 +142,7 @@
 %sticky {
 	position: sticky;
 	z-index: 1;
+	background: var(--tkcolor-bg0);
 }
 .tksticky {
 	&-top {@extend %sticky; top: 0}

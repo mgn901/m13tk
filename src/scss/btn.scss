@@ -1,37 +1,40 @@
 %btn {
 	& {
-		box-shadow: $tkshadow-btn, 0 0 0 0px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn, 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg0);
 		outline: none;
 		-webkit-tap-highlight-color: transparent;
-		transition: box-shadow .1s cubic-bezier($tktransition-in), background .1s cubic-bezier($tktransition-in);
+		transition: box-shadow .1s $tktransition-in, background .1s $tktransition-in;
 	}
 	&:hover, &:focus {
-		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow);
 	}
 	&.tkbutton-pressed {
-		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg1);
 	}
 	&:active {
-		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg1);
+	}
+	&:disabled {
+		opacity: .3;
 	}
 }
 .tkbtn-normal {
 	@extend %btn;
 	& {
 		border: 1px var(--tkcolor-bg2) solid;
-		border-radius: .25rem;
+		border-radius: .5rem;
 		// font-size: .9rem;
 	}
 }
 .tkbtn-flat {
 	@extend %btn;
 	& {
-		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-shadow);
 	}
 	&:hover, &:focus {
-		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-bg2);
+		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
 	}
 }

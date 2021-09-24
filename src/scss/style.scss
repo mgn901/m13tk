@@ -8,83 +8,27 @@ $tkcolor-pr6: #00609b;
 $tkcolor-pr7: #005285;
 $tkcolor-pr8: #004571;
 $tkcolor-bg0: #f9f8f4;
-$tkcolor-bg1: #d5d4d2;
-$tkcolor-bg2: #b6b6b4;
-$tkcolor-bg3: #9b9b9a;
-$tkcolor-bg4: #838381;
-$tkcolor-bg5: #6d6d6c;
-$tkcolor-bg6: #595756;
-$tkcolor-bg7: #403d3a;
+$tkcolor-bg1: #e4e2dd;
+$tkcolor-bg2: #c6c2bc;
+$tkcolor-bg3: #a8a49d;
+$tkcolor-bg4: #8c867e;
+$tkcolor-bg5: #706a61;
+$tkcolor-bg6: #564e45;
+$tkcolor-bg7: #3d352b;
 $tkcolor-bg8: #251d13;
 $tkcolor-bg0shadow: #f9f8f440;
 $tkcolor-bg8shadow: #251d1340;
+$tkcolor-pr0shadow: #cce2f540;
 $tkcolor-pr8shadow: #00457140;
 $tkfont-sans: Inter, Roboto, '源ノ角ゴシック JP', 'Noto Sans JP', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Segoe UI', 'メイリオ', Meiryo, sans-serif;
 $tkfont-serif: '源ノ明朝 JP', 'Noto Serif JP', ui-serif, 'NewYork', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', 'Yu Mincho', serif;
 $tkfont-monospace: 'Roboto Mono', '源ノ角ゴシック JP', 'Noto Sans JP', ui-monospace, 'SF Mono', 'SFMono-Regular', 'Dejavu Sans Mono', Menlo, Consolas, BlinkMacSystemFont, Meiryo, monospace;
 $tkfont-fontfeature: 'cv02', 'cv03', 'cv04', 'cv05', 'cv06', 'cv08', 'zero';
-$tkshadow-btn: 0 .025rem .125rem 0rem var(--tkcolor-shadow);
-$tkshadow-btn-transparent: 0 .025rem 0 transparent;
+$tkshadow-btn: 0 1px 0 0 var(--tkcolor-bg2);
+$tkshadow-btn-transparent: 0 0 0 var(--tkcolor-bg2);
 // $tkshadow-card: 0 .1rem .2rem $tkcolor-bg8shadow;
 // $tkshadow-toolbar: 0 0 .2rem $tkcolor-bg8shadow;
-$tktransition-in: 0, 0, 0, 1;
-
-.tkcolor-light, .tkcolor-dark,.tkcolor-pr {
-	@extend %color;
-}
-:root, .tkcolor-light {
-	--tkcolor-bg0:#{$tkcolor-bg0};
-	--tkcolor-bg1:#{$tkcolor-bg1};
-	--tkcolor-bg2:#{$tkcolor-bg2};
-	--tkcolor-fg0:#{$tkcolor-bg8};
-	--tkcolor-fg1:#{$tkcolor-bg6};
-	--tkcolor-fg2:#{$tkcolor-bg4};
-	--tkcolor-shadow:#{$tkcolor-bg8shadow};
-}
-.tkcolor-dark {
-	--tkcolor-bg0:#{$tkcolor-bg8};
-	--tkcolor-bg1:#{$tkcolor-bg7};
-	--tkcolor-bg2:#{$tkcolor-bg6};
-	--tkcolor-fg0:#{$tkcolor-bg0};
-	--tkcolor-fg1:#{$tkcolor-bg2};
-	--tkcolor-fg2:#{$tkcolor-bg4};
-	--tkcolor-shadow:#{$tkcolor-bg0shadow};
-}
-.tkcolor-dark .tkcolor-pr {
-	--tkcolor-bg0:#{$tkcolor-pr4};
-	--tkcolor-bg1:#{$tkcolor-pr3};
-	--tkcolor-bg2:#{$tkcolor-pr2};
-}
-.tkcolor-pr, .tkcolor-light .tkcolor-pr {
-	--tkcolor-bg0:#{$tkcolor-pr4};
-	--tkcolor-bg1:#{$tkcolor-pr5};
-	--tkcolor-bg2:#{$tkcolor-pr6};
-	--tkcolor-fg0:#{$tkcolor-bg0};
-	--tkcolor-fg1:#{$tkcolor-pr0};
-	--tkcolor-fg2:#{$tkcolor-pr1};
-	--tkcolor-shadow:#{$tkcolor-pr8shadow};
-}
-@media (prefers-color-scheme: dark) {
-	:root {
-		--tkcolor-bg0:#{$tkcolor-bg8};
-		--tkcolor-bg1:#{$tkcolor-bg7};
-		--tkcolor-bg2:#{$tkcolor-bg6};
-		--tkcolor-fg0:#{$tkcolor-bg0};
-		--tkcolor-fg1:#{$tkcolor-bg2};
-		--tkcolor-fg2:#{$tkcolor-bg4};
-		--tkcolor-shadow:#{$tkcolor-bg0shadow};
-	}
-	.tkcolor-light .tkcolor-pr {
-		--tkcolor-bg0:#{$tkcolor-pr4};
-		--tkcolor-bg1:#{$tkcolor-pr5};
-		--tkcolor-bg2:#{$tkcolor-pr6};
-	}
-	.tkcolor-pr, .tkcolor-dark .tkcolor-pr {
-		--tkcolor-bg0:#{$tkcolor-pr4};
-		--tkcolor-bg1:#{$tkcolor-pr3};
-		--tkcolor-bg2:#{$tkcolor-pr2};
-	}
-}
+$tktransition-in: cubic-bezier(0, 0, 0, 1);
 
 html, body {
 	margin: 0;
@@ -100,8 +44,9 @@ ul, ol, li {
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import './cnt.scss';
 @import './chip.scss';
+@import './txt.scss';
 @import './btn.scss';
 @import './input.scss';
-@import './txt.scss';
 @import './page.scss';
 @import './layout.scss';
+@import './color.scss';

@@ -1,0 +1,68 @@
+.tkcolor-light, .tkcolor-dark, .tkcolor-pr {
+	@extend %color;
+}
+:root, .tkcolor-light {
+	--tkcolor-bg0:#{$tkcolor-bg0};
+	--tkcolor-bg1:#{$tkcolor-bg1};
+	--tkcolor-bg2:#{$tkcolor-bg2};
+	--tkcolor-fg0:#{$tkcolor-bg8};
+	--tkcolor-fg1:#{$tkcolor-bg6};
+	--tkcolor-fg2:#{$tkcolor-bg4};
+	--tkcolor-shadow:#{$tkcolor-bg8shadow};
+}
+.tkcolor-dark {
+	--tkcolor-bg0:#{$tkcolor-bg8};
+	--tkcolor-bg1:#{$tkcolor-bg7};
+	--tkcolor-bg2:#{$tkcolor-bg6};
+	--tkcolor-fg0:#{$tkcolor-bg0};
+	--tkcolor-fg1:#{$tkcolor-bg2};
+	--tkcolor-fg2:#{$tkcolor-bg4};
+	--tkcolor-shadow:#{$tkcolor-bg0shadow};
+}
+.tkcolor-dark .tkcolor-pr {
+	--tkcolor-bg0:#{$tkcolor-pr4};
+	--tkcolor-bg1:#{$tkcolor-pr3};
+	--tkcolor-bg2:#{$tkcolor-pr2};
+	--tkcolor-shadow:#{$tkcolor-pr0shadow};
+}
+.tkcolor-pr, .tkcolor-light .tkcolor-pr {
+	--tkcolor-bg0:#{$tkcolor-pr4};
+	--tkcolor-bg1:#{$tkcolor-pr5};
+	--tkcolor-bg2:#{$tkcolor-pr6};
+	--tkcolor-fg0:#{$tkcolor-bg0};
+	--tkcolor-fg1:#{$tkcolor-pr0};
+	--tkcolor-fg2:#{$tkcolor-pr1};
+	--tkcolor-shadow:#{$tkcolor-pr8shadow};
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--tkcolor-bg0:#{$tkcolor-bg8};
+		--tkcolor-bg1:#{$tkcolor-bg7};
+		--tkcolor-bg2:#{$tkcolor-bg6};
+		--tkcolor-fg0:#{$tkcolor-bg0};
+		--tkcolor-fg1:#{$tkcolor-bg2};
+		--tkcolor-fg2:#{$tkcolor-bg4};
+		--tkcolor-shadow:#{$tkcolor-bg0shadow};
+	}
+	.tkcolor-light .tkcolor-pr {
+		--tkcolor-bg0:#{$tkcolor-pr4};
+		--tkcolor-bg1:#{$tkcolor-pr5};
+		--tkcolor-bg2:#{$tkcolor-pr6};
+		--tkcolor-shadow:#{$tkcolor-pr8shadow};
+	}
+	.tkcolor-pr, .tkcolor-dark .tkcolor-pr {
+		--tkcolor-bg0:#{$tkcolor-pr4};
+		--tkcolor-bg1:#{$tkcolor-pr3};
+		--tkcolor-bg2:#{$tkcolor-pr2};
+		--tkcolor-shadow:#{$tkcolor-pr0shadow};
+	}
+}
+
+.tkcolor- {
+	&bg0 {background: var(--bg0);}
+	&bg1 {background: var(--tkcolor-bg1)}
+	&bg2 {background: var(--tkcolor-bg2)}
+	&fg0 {color: var(--tkcolor-fg0)}
+	&fg1 {color: var(--tkcolor-fg1)}
+	&fg2 {color: var(--tkcolor-fg2)}
+}
