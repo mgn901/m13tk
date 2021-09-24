@@ -28,7 +28,7 @@
 	@extend %cntchip;
 	width: 1rem;
 	min-height: 1rem;
-	margin-top: .25rem;
+	margin-block-start: .25rem;
 	border: 1px var(--tkcolor-fg2) solid;
 	border-radius: .25rem;
 	background: var(--tkcolor-bg0);
@@ -56,8 +56,8 @@
 	&::before {
 		content: "";
 		position: absolute;
-		top: 2px;
-		left: 1px;
+		top: calc(.25rem - 2px);
+		left: calc(.2rem - 2px);
 		width: .6rem;
 		height: .3rem;
 		box-sizing: content-box;
@@ -68,6 +68,10 @@
 	&:checked::before {
 		border-left: 2px var(--tkcolor-bg0) solid;
 		border-bottom: 2px var(--tkcolor-bg0) solid;
+	}
+	&:active:checked::before {
+		border-left: 2px var(--tkcolor-bg1) solid;
+		border-bottom: 2px var(--tkcolor-bg1) solid;
 	}
 }
 
