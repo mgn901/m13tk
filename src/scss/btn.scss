@@ -9,7 +9,7 @@
 	&:hover, &:focus {
 		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow);
 	}
-	&.tkbutton-pressed {
+	&.tkbutton--pressed {
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg1);
 	}
