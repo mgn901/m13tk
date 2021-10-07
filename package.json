@@ -4,6 +4,13 @@
 	"description": "A CSS Framework to create UI instantly.",
 	"main": "src/style.scss",
 	"style": "css/style.css",
+	"files": [
+		"css",
+		"src",
+		"LICENSE.txt",
+		"README.md",
+		"package.json"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "sass src/scss/style.scss css/style.css --style compressed --no-source-map"
