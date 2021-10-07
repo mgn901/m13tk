@@ -8,6 +8,7 @@
 	& {@extend %txt;}
 	&-heading {@extend %txt; font-weight: bold}
 	&-small {@extend %txt; font-size: .75rem}
+	&-code {font-family: $tkfont-monospace}
 }
 .tkcnt-txt--small>%txt {
 	font-size: .75rem;

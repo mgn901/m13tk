@@ -38,3 +38,23 @@
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 3px var(--tkcolor-shadow);
 	}
 }
+.tkbtn-txt {
+	& {
+		border-bottom: 3px transparent solid;
+		background: transparent;
+		color: var(--tkcolor-pr0);
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
+		transition: border .1s $tktransition-in, color .1s $tktransition-in;
+	}
+	&:hover, &:focus {
+		border-bottom: 3px var(--tkcolor-shadow) solid;
+	}
+	&:active {
+		color: var(--tkcolor-pr2);
+		border-bottom: 3px var(--tkcolor-shadow) solid;
+	}
+	&:disabled {
+		opacity: .3;
+	}
+}
