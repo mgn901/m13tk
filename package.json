@@ -27,7 +27,7 @@
 	"author": "mgn901 <mgn901+dev@gmail.com> (https://scrapbox.io/mgn901/Meganesium2001)",
 	"license": "MIT",
   "bugs": {
-    "url": "https://github.com/mgn901/m13tk-react/issues"
+    "url": "https://github.com/mgn901/m13tk/issues"
   },
   "homepage": "https://scrapbox.io/mgn901/m13TK",
 	"devDependencies": {
