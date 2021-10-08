@@ -1,3 +1,12 @@
+@keyframes tkanimation-spinner {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 %txt {
 	text-decoration: none;
 	color: var(--tkcolor-fg1);
@@ -6,9 +15,32 @@
 }
 .tktxt {
 	& {@extend %txt;}
+	&-icon, &-spinner {
+		@extend %txt;
+		line-height: 1;
+		font-family: 'Material Icons';
+		font-style: normal;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings: 'liga';
+	}
+	&-spinner {
+		animation: tkanimation-spinner 1.5s linear 0s infinite;
+	}
+	&-spinner::before {
+		content: '\e028';
+	}
 	&-heading {@extend %txt; font-weight: bold}
 	&-small {@extend %txt; font-size: .75rem}
-	&-code {font-family: $tkfont-monospace}
+	&-large {@extend %txt; font-size: 1.3rem}
+	&-x-large {@extend %txt; line-height: 3rem; font-size: 2rem}
+	&-code {@extend %txt; font-family: $tkfont-monospace}
 }
 .tkcnt-txt--small>%txt {
 	font-size: .75rem;

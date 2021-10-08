@@ -256,6 +256,14 @@
 		line-height: 1rem;
 		font-size: .75rem;
 	}
+	&--large {
+		line-height: 1.5rem;
+		font-size: 1.3rem;
+	}
+	&--x-large {
+		line-height: 3rem;
+		font-size: 2rem;
+	}
 	&>%txt {
 		margin: 0;
 	}
