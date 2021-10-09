@@ -7,16 +7,16 @@
 	}
 }
 
-%txt {
+%tktxt {
 	text-decoration: none;
 	color: var(--tkcolor-fg1);
 	font-weight: normal;
 	font-size: 1rem;
 }
 .tktxt {
-	& {@extend %txt;}
+	& {@extend %tktxt;}
 	&-icon, &-spinner {
-		@extend %txt;
+		@extend %tktxt;
 		line-height: 1;
 		font-family: 'Material Icons';
 		font-style: normal;
@@ -36,13 +36,13 @@
 	&-spinner::before {
 		content: '\e028';
 	}
-	&-heading {@extend %txt; font-weight: bold}
-	&-small {@extend %txt; font-size: .75rem}
-	&-large {@extend %txt; font-size: 1.3rem}
-	&-x-large {@extend %txt; line-height: 3rem; font-size: 2rem}
-	&-code {@extend %txt; font-family: $tkfont-monospace}
+	&-heading {@extend %tktxt; font-weight: bold}
+	&-small {@extend %tktxt; font-size: .75rem}
+	&-large {@extend %tktxt; font-size: 1.3rem}
+	&-x-large {@extend %tktxt; line-height: 3rem; font-size: 2rem}
+	&-code {@extend %tktxt; font-family: $tkfont-monospace}
 }
-.tkcnt-txt--small>%txt {
+.tkcnt-txt--small>%tktxt {
 	font-size: .75rem;
 }
 .tktxt--trim {

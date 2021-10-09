@@ -14,94 +14,94 @@
 	&-around {justify-content: space-around}
 }
 
-@mixin x($x) {
+@mixin tkx($x) {
 	width: $x * .25rem
 }
-@mixin y($y) {
+@mixin tky($y) {
 	height: $y * .25rem;
 	max-height: $y * .25rem;
 }
 .tkx {
-	&-4 {@include x(4)}
-	&-6 {@include x(6)}
-	&-8 {@include x(8)}
-	&-12 {@include x(12)}
-	&-16 {@include x(16)}
-	&-18 {@include x(18)}
-	&-20 {@include x(20)}
-	&-24 {@include x(24)}
-	&-30 {@include x(30)}
-	&-40 {@include x(40)}
-	&-80 {@include x(80)}
-	&-120 {@include x(120)}
-	&-160 {@include x(160)}
+	&-4 {@include tkx(4)}
+	&-6 {@include tkx(6)}
+	&-8 {@include tkx(8)}
+	&-12 {@include tkx(12)}
+	&-16 {@include tkx(16)}
+	&-18 {@include tkx(18)}
+	&-20 {@include tkx(20)}
+	&-24 {@include tkx(24)}
+	&-30 {@include tkx(30)}
+	&-40 {@include tkx(40)}
+	&-80 {@include tkx(80)}
+	&-120 {@include tkx(120)}
+	&-160 {@include tkx(160)}
 	&-fit {width: 100%}
 }
 .tky {
-	&-4 {@include y(4)}
-	&-6 {@include y(6)}
-	&-8 {@include y(8)}
-	&-12 {@include y(12)}
-	&-16 {@include y(16)}
-	&-18 {@include y(18)}
-	&-20 {@include y(20)}
-	&-24 {@include y(24)}
-	&-30 {@include y(30)}
-	&-60 {@include y(60)}
-	&-120 {@include y(120)}
-	&-180 {@include y(180)}
-	&-240 {@include y(240)}
+	&-4 {@include tky(4)}
+	&-6 {@include tky(6)}
+	&-8 {@include tky(8)}
+	&-12 {@include tky(12)}
+	&-16 {@include tky(16)}
+	&-18 {@include tky(18)}
+	&-20 {@include tky(20)}
+	&-24 {@include tky(24)}
+	&-30 {@include tky(30)}
+	&-60 {@include tky(60)}
+	&-120 {@include tky(120)}
+	&-180 {@include tky(180)}
+	&-240 {@include tky(240)}
 	&-fit {height: 100%}
 }
 
-%px {
+%tkpx {
 	padding-inline-start: var(--tkpx);
 	padding-inline-end: var(--tkpx);
 }
-%py {
+%tkpy {
 	padding-block-start: var(--tkpy);
 	padding-block-end: var(--tkpy);
 }
-@mixin px($i) {
-	@extend %px;
+@mixin tkpx($i) {
+	@extend %tkpx;
 	--tkpx:#{$i * .25rem};
 }
-@mixin py($i) {
-	@extend %py;
+@mixin tkpy($i) {
+	@extend %tkpy;
 	--tkpy:#{$i * .25rem};
 }
 .tkp {
-	&-0 {@include px(0); @include py(0)}
-	&-1 {@include px(1); @include py(1)}
-	&-2 {@include px(2); @include py(2)}
-	&-3 {@include px(3); @include py(3)}
-	&-4 {@include px(4); @include py(4)}
-	&-5 {@include px(5); @include py(5)}
-	&-6 {@include px(6); @include py(6)}
-	&x-0 {@include px(0)}
-	&x-1 {@include px(1)}
-	&x-2 {@include px(2)}
-	&x-3 {@include px(3)}
-	&x-4 {@include px(4)}
-	&x-5 {@include px(5)}
-	&x-6 {@include px(6)}
-	&y-0 {@include py(0)}
-	&y-1 {@include py(1)}
-	&y-2 {@include py(2)}
-	&y-3 {@include py(3)}
-	&y-4 {@include py(4)}
-	&y-5 {@include py(5)}
-	&y-6 {@include py(6)}
+	&-0 {@include tkpx(0); @include tkpy(0)}
+	&-1 {@include tkpx(1); @include tkpy(1)}
+	&-2 {@include tkpx(2); @include tkpy(2)}
+	&-3 {@include tkpx(3); @include tkpy(3)}
+	&-4 {@include tkpx(4); @include tkpy(4)}
+	&-5 {@include tkpx(5); @include tkpy(5)}
+	&-6 {@include tkpx(6); @include tkpy(6)}
+	&x-0 {@include tkpx(0)}
+	&x-1 {@include tkpx(1)}
+	&x-2 {@include tkpx(2)}
+	&x-3 {@include tkpx(3)}
+	&x-4 {@include tkpx(4)}
+	&x-5 {@include tkpx(5)}
+	&x-6 {@include tkpx(6)}
+	&y-0 {@include tkpy(0)}
+	&y-1 {@include tkpy(1)}
+	&y-2 {@include tkpy(2)}
+	&y-3 {@include tkpy(3)}
+	&y-4 {@include tkpy(4)}
+	&y-5 {@include tkpy(5)}
+	&y-6 {@include tkpy(6)}
 }
 
-%sticky {
+%tksticky {
 	position: sticky;
 	z-index: 1;
 	background: var(--tkcolor-bg0);
 }
 .tksticky {
-	&-top {@extend %sticky; top: 0}
-	&-bottom {@extend %sticky; bottom: 0}
-	&-right {@extend %sticky; right: 0}
-	&-left {@extend %sticky; left: 0}
+	&-top {@extend %tksticky; top: 0}
+	&-bottom {@extend %tksticky; bottom: 0}
+	&-right {@extend %tksticky; right: 0}
+	&-left {@extend %tksticky; left: 0}
 }

@@ -10,59 +10,59 @@
 	}
 }
 
-@mixin shadow($s) {
+@mixin tkshadow($s) {
 	box-shadow: 0 $s * .025rem $s * .125rem 0 var(--tkcolor-shadow);
 }
 .tkshadow{
-	&-1 {@include shadow(1)}
-	&-2 {@include shadow(2)}
-	&-3 {@include shadow(3)}
-	&-4 {@include shadow(4)}
+	&-1 {@include tkshadow(1)}
+	&-2 {@include tkshadow(2)}
+	&-3 {@include tkshadow(3)}
+	&-4 {@include tkshadow(4)}
 }
 
-@mixin r($i) {border-radius: $i * .25rem}
-@mixin r-tl($i) {border-top-left-radius: $i * .25rem}
-@mixin r-tr($i) {border-top-right-radius: $i * .25rem}
-@mixin r-bl($i) {border-bottom-left-radius: $i * .25rem}
-@mixin r-br($i) {border-bottom-right-radius: $i * .25rem}
+@mixin tkr($i) {border-radius: $i * .25rem}
+@mixin tkr-tl($i) {border-top-left-radius: $i * .25rem}
+@mixin tkr-tr($i) {border-top-right-radius: $i * .25rem}
+@mixin tkr-bl($i) {border-bottom-left-radius: $i * .25rem}
+@mixin tkr-br($i) {border-bottom-right-radius: $i * .25rem}
 .tkr {
-	&-0 {@include r(0)}
-	&-1 {@include r(1)}
-	&-2 {@include r(2)}
-	&-3 {@include r(3)}
-	&-4 {@include r(4)}
+	&-0 {@include tkr(0)}
+	&-1 {@include tkr(1)}
+	&-2 {@include tkr(2)}
+	&-3 {@include tkr(3)}
+	&-4 {@include tkr(4)}
 }
 .tkr-tl {
-	&-0 {@include r-tl(0)}
-	&-1 {@include r-tl(1)}
-	&-2 {@include r-tl(2)}
-	&-3 {@include r-tl(3)}
-	&-4 {@include r-tl(4)}
+	&-0 {@include tkr-tl(0)}
+	&-1 {@include tkr-tl(1)}
+	&-2 {@include tkr-tl(2)}
+	&-3 {@include tkr-tl(3)}
+	&-4 {@include tkr-tl(4)}
 }
 .tkr-tr {
-	&-0 {@include r-tr(0)}
-	&-1 {@include r-tr(1)}
-	&-2 {@include r-tr(2)}
-	&-3 {@include r-tr(3)}
-	&-4 {@include r-tr(4)}
+	&-0 {@include tkr-tr(0)}
+	&-1 {@include tkr-tr(1)}
+	&-2 {@include tkr-tr(2)}
+	&-3 {@include tkr-tr(3)}
+	&-4 {@include tkr-tr(4)}
 }
 .tkr-bl {
-	&-0 {@include r-bl(0)}
-	&-1 {@include r-bl(1)}
-	&-2 {@include r-bl(2)}
-	&-3 {@include r-bl(3)}
-	&-4 {@include r-bl(4)}
+	&-0 {@include tkr-bl(0)}
+	&-1 {@include tkr-bl(1)}
+	&-2 {@include tkr-bl(2)}
+	&-3 {@include tkr-bl(3)}
+	&-4 {@include tkr-bl(4)}
 }
 .tkr-br {
-	&-0 {@include r-br(0)}
-	&-1 {@include r-br(1)}
-	&-2 {@include r-br(2)}
-	&-3 {@include r-br(3)}
-	&-4 {@include r-br(4)}
+	&-0 {@include tkr-br(0)}
+	&-1 {@include tkr-br(1)}
+	&-2 {@include tkr-br(2)}
+	&-3 {@include tkr-br(3)}
+	&-4 {@include tkr-br(4)}
 }
 
 .tkcolor-light, .tkcolor-dark, .tkcolor-pr {
-	@extend %color;
+	@extend %tkcolor;
 }
 :root, .tkcolor-light {
 	--tkcolor-bg0:#{$tkcolor-bg0};

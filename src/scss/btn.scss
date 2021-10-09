@@ -1,4 +1,4 @@
-%btn {
+%tkbtn {
 	& {
 		box-shadow: $tkshadow-btn, 0 0 0 0px var(--tkcolor-shadow);
 		background: var(--tkcolor-bg0);
@@ -22,7 +22,7 @@
 	}
 }
 .tkbtn-normal {
-	@extend %btn;
+	@extend %tkbtn;
 	& {
 		border: 1px var(--tkcolor-bg2) solid;
 		border-radius: .5rem;
@@ -30,7 +30,7 @@
 	}
 }
 .tkbtn-flat {
-	@extend %btn;
+	@extend %tkbtn;
 	& {
 		box-shadow: $tkshadow-btn-transparent, 0 0 0 0px var(--tkcolor-shadow);
 	}
