@@ -1,12 +1,19 @@
 {
 	"name": "@mgn901/m13tk",
 	"version": "1.0.1",
-	"description": "A CSS Framework to create UI instantly.",
+	"description": "A CSS Framework to build UI instantly.",
 	"main": "src/style.scss",
 	"style": "css/style.css",
+	"files": [
+		"css",
+		"src",
+		"LICENSE.txt",
+		"README.md",
+		"package.json"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "sass src/scss/style.scss css/style.css --style compressed --no-source-map"
+		"build": "sass src/scss/style.scss --style compressed --no-source-map | node ./scripts/sanitizeCSS.js > ./css/style.css"
 	},
 	"repository": {
 		"type": "git",
@@ -17,8 +24,12 @@
 		"sass",
 		"framework"
 	],
-	"author": "mgn901 <mgn901+dev@gmail.com>",
+	"author": "mgn901 <mgn901+dev@gmail.com> (https://scrapbox.io/mgn901/Meganesium2001)",
 	"license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgn901/m13tk/issues"
+  },
+  "homepage": "https://scrapbox.io/mgn901/m13TK",
 	"devDependencies": {
 		"sass": "^1.37.5"
 	},

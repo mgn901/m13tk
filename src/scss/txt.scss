@@ -1,18 +1,51 @@
-%txt {
+@keyframes tkanimation-spinner {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+%tktxt {
 	text-decoration: none;
 	color: var(--tkcolor-fg1);
 	font-weight: normal;
 	font-size: 1rem;
 }
 .tktxt {
-	& {@extend %txt;}
-	&-heading {@extend %txt; font-weight: bold}
-	&-small {@extend %txt; font-size: .75rem}
+	& {@extend %tktxt;}
+	&-icon, &-spinner {
+		@extend %tktxt;
+		line-height: 1;
+		font-family: 'Material Icons';
+		font-style: normal;
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: ltr;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings: 'liga';
+	}
+	&-spinner {
+		animation: tkanimation-spinner 1.5s linear 0s infinite;
+	}
+	&-spinner::before {
+		content: '\e028';
+	}
+	&-heading {@extend %tktxt; font-weight: bold}
+	&-small {@extend %tktxt; font-size: .75rem}
+	&-large {@extend %tktxt; font-size: 1.3rem}
+	&-x-large {@extend %tktxt; line-height: 3rem; font-size: 2rem}
+	&-code {@extend %tktxt; font-family: $tkfont-monospace}
 }
-.tkcnt-txt--small>%txt {
+.tkcnt-txt--small>%tktxt {
 	font-size: .75rem;
 }
-.tktxt--shrinkable {
+.tktxt--trim {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;

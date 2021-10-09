@@ -1,5 +1,5 @@
-%chip {
-	@extend %cntchip;
+%tkchip {
+	@extend %tkcntchip;
 	display: inline-flex;
 	flex-shrink: 0;
 	height: 1.5rem;
@@ -8,11 +8,11 @@
 	vertical-align: top;
 }
 .tkchip-x {
-	@extend %chip, %cntchip-x;
+	@extend %tkchip, %tkcntchip-x;
 	flex-direction: row;
 }
 .tkchip-y {
-	@extend %chip, %cntchip-y;
+	@extend %tkchip, %tkcntchip-y;
 	flex-direction: column;
 }
 .tkchip--shrinkable {

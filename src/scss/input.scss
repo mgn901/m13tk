@@ -1,4 +1,4 @@
-%input {
+%tkinput {
 	& {
 		border: 1px var(--tkcolor-bg2) solid;
 		box-shadow: 0 0 0 0px var(--tkcolor-shadow);
@@ -14,18 +14,18 @@
 }
 
 .tkinputwrapper-text {
-	@extend %input;
+	@extend %tkinput;
 	border-radius: .5rem;
 }
 
 .tkinput-text {
-	@extend %cntchip;
+	@extend %tkcntchip;
 	width: 100%;
 	background: transparent;
 }
 
-%checkboxradio {
-	@extend %cntchip;
+%tkcheckboxradio {
+	@extend %tkcntchip;
 	width: 1rem;
 	min-height: 1rem;
 	margin-block-start: .25rem;
@@ -47,7 +47,7 @@
 }
 
 .tkinput-checkbox {
-	@extend %checkboxradio;
+	@extend %tkcheckboxradio;
 	position: relative;
 	&:checked {
 		border: 1px var(--tkcolor-fg0) solid;
@@ -76,7 +76,7 @@
 }
 
 .tkinput-radio {
-	@extend %checkboxradio;
+	@extend %tkcheckboxradio;
 	border-radius: 50%;
 	&:hover, &:focus {
 		box-shadow: $tkshadow-btn, 0 0 0 3px var(--tkcolor-shadow), 0 0 0 0 var(--tkcolor-fg0) inset;
@@ -97,7 +97,7 @@
 }
 
 .tkinput-range {
-	@extend %cntchip;
+	@extend %tkcntchip;
 	width: 100%;
 	background: transparent;
 	&::-webkit-slider-runnable-track {
@@ -155,7 +155,7 @@
 }
 
 .tkinput-progress {
-	@extend %cntchip;
+	@extend %tkcntchip;
 	width: 100%;
 	min-height: 1rem;
 	margin-block-start: .5rem;
